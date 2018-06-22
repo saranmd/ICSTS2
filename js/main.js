@@ -101,7 +101,9 @@ $(document).ready(function(){
 			console.log('done scrolling');
 		}
 	});
-	
+    
+
+
     $(window).scroll(function () {
         if ($(window).scrollTop() > 400) {
             $(".navbar-brand a").css("color","#fff");
@@ -168,7 +170,14 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
+    
+    
+    $('#Count-Down').countdown('2019/07/03', function(event) {
+        $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));
+      });
+
+
+
 });
 
 
@@ -180,6 +189,8 @@ google.maps.event.addDomListener(window, 'load', init);
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+
+
 
 	    var myLatLng = new google.maps.LatLng(22.402789, 91.822156);
 
@@ -242,7 +253,14 @@ function init() {
                 visibility: 'off'
             }]
         }]
+
+
     };
+
+
+
+
+
 
     // Get the HTML DOM element that will contain your map 
     // We are using a div with id="map" seen below in the <body>
